@@ -15,7 +15,6 @@ public class PrefabsMovement : MonoBehaviour
     [SerializeField] int additoinValue;
     [SerializeField] ParticleSystem explosion;
 
-    // Start is called before the first frame update
     void Start()
     {
         objRB = GetComponent<Rigidbody>();
@@ -23,11 +22,6 @@ public class PrefabsMovement : MonoBehaviour
         objRB.AddTorque(GetRandomTorque(), GetRandomTorque(), GetRandomTorque(), ForceMode.Impulse);
 
         gameManager = GameObject.Find("Game Manager").GetComponent<GameManager>();
-    }
-
-    void FixedUpdate()
-    {
-
     }
 
     float GetRandomForce()

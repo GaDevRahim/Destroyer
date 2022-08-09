@@ -10,7 +10,7 @@ public class DifficultyButton : MonoBehaviour
 
     Button button;
     GameManager gameManager;
-    // Start is called before the first frame update
+
     void Start()
     {
         button = GetComponent<Button>();
@@ -19,11 +19,6 @@ public class DifficultyButton : MonoBehaviour
         gameManager.startScreen.gameObject.SetActive(true);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
     void SetDiffecalty()
     {
         switch (button.gameObject.name)
@@ -46,10 +41,5 @@ public class DifficultyButton : MonoBehaviour
             default: break;
         }
         gameManager.StartGame();
-    }
-
-    void DisappearButtons()
-    {
-
     }
 }
